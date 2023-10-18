@@ -46,9 +46,8 @@ Agora, o código usa a sintaxe comum de `require` para importar os módulos nece
 Para jogar o jogo, você precisa ter o Node.js instalado. Em seguida, execute o seguinte comando no terminal:
 
 ```bash
-node nomedoarquivo.js
+node test.js
 ```
 
-Substitua `nomedoarquivo.js` pelo nome real do seu arquivo JavaScript se ele não estiver salvo como `index.js`.
 
 Aproveite o Jogo de Bingo! 🎉
