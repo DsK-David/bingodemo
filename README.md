@@ -15,28 +15,28 @@ Aqui estão as alterações necessárias para resolver o problema:
 ```javascript
 const chalk = require('chalk');
 const readline = require('readline-sync');
-const { random } = require('./index');
-
-function bingo() {
+import { green } from 'chalk';
+import { question } from 'readline';
+import { random } from './index';
+function bingo(){
     const NumerosSorteados = new Set()
     const totalNumeros = 90
     let rodada = 1
 
-    while (NumerosSorteados.size < totalNumeros) {
+    while(NumerosSorteados.size<totalNumeros){
         const NumeroSorteado = random()
-        if (!NumerosSorteados.has(NumeroSorteado)) {
+        if(!NumerosSorteados.has(NumeroSorteado)){
             NumerosSorteados.add(NumeroSorteado);
             console.log(`rodada ${rodada++}:${NumeroSorteado}`)
         }
-        if (NumeroSorteado === numeroEscolhido) {
+        if(NumeroSorteado === numeroEscolhido){
             console.log(chalk.green(`Parabens! seu numero ${numeroEscolhido} foi sorteado`))
         }
     }
     console.log('bingo completo')
 }
-
-const numeroEscolhido = parseInt(readline.question('Escolha um numero de 1000 a 9999'), 10);
-bingo();
+const numeroEscolhido = parseInt(question('Escolha um numero de 1000 a 9999'),10)
+bingo()
 ```
 
 Agora, o código usa a sintaxe comum de `require` para importar os módulos necessários.
