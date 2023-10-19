@@ -13,7 +13,7 @@ function bingo(){
             console.log(`rodada ${rodada++}:${NumeroSorteado}`)
         }
         if(NumeroSorteado === numeroEscolhido){
-            console.log(green(`Parabens! seu numero ${numeroEscolhido} foi sorteado`))
+            console.log(chalk.green(`Parabens! seu numero ${numeroEscolhido} foi sorteado`))
         }
     }
     console.log('bingo completo')
